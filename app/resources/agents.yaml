@@ -1,0 +1,33 @@
+# Example Agents Configuration
+- name: researcher
+  role: Senior Market Researcher
+  goal: Identify emerging trends in AI agents for marketing.
+  backstory: |
+    Expert in market analysis and technological trends.
+    Skilled at identifying high-growth opportunities.
+  llm_provider: groq
+  llm_model: llama3-70b-8192
+
+- name: writer
+  role: Creative Content Strategist
+  goal: Craft compelling narratives around AI trends.
+  backstory: |
+    Experienced writer specializing in technical but accessible content.
+    Passionate about storytelling and brand development.
+  llm_provider: ollama
+  llm_model: llama3
+
+# Example Tasks Configuration
+- name: research_task
+  description: |
+    Conduct a comprehensive search on the latest advancements in AI agent orchestration.
+    Focus on autonomous multi-agent systems.
+  expected_output: A 5-page report on current trends and future projections.
+  agent_name: researcher
+
+- name: content_task
+  description: |
+    Use the research report to create a series of 3 blog posts for LinkedIn.
+    Target audience is marketing professionals.
+  expected_output: 3 LinkedIn posts (max 200 words each) with relevant hashtags.
+  agent_name: writer
