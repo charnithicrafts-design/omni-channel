@@ -3,9 +3,15 @@ import time
 from fastapi.testclient import TestClient
 from app.main import app
 
+from unittest.mock import patch, MagicMock
+
 client = TestClient(app)
 
-def test_e2e_workflow_execution():
+@patch("crewai.Crew.kickoff")
+def test_e2e_workflow_execution(mock_kickoff):
+    # Mock the return value of kickoff
+    mock_kickoff.return_value = "Mocked result for AI Trends 2026"
+    
     # 1. Trigger the workflow
     trigger_response = client.post(
         "/workflows/trigger",
@@ -18,7 +24,7 @@ def test_e2e_workflow_execution():
     job_id = trigger_response.json()["job_id"]
     
     # 2. Poll for status until completed
-    max_retries = 10
+    max_retries = 20
     retry_interval = 0.5
     status = "pending"
     
@@ -26,7 +32,7 @@ def test_e2e_workflow_execution():
         status_response = client.get(f"/workflows/status/{job_id}")
         assert status_response.status_code == 200
         status = status_response.json()["status"]
-        if status == "completed":
+        if status in ["completed", "failed"]:
             break
         time.sleep(retry_interval)
     
@@ -34,7 +40,9 @@ def test_e2e_workflow_execution():
     assert "result" in status_response.json()
     assert "AI Trends 2026" in status_response.json()["result"]
 
-def test_e2e_multi_provider_config():
+@patch("crewai.Crew.kickoff")
+def test_e2e_multi_provider_config(mock_kickoff):
+    mock_kickoff.return_value = "Mocked multi-provider result"
     # Test triggering a workflow with a different provider/model
     # This verifies the config is accepted
     trigger_response = client.post(

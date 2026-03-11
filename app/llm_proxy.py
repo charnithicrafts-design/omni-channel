@@ -17,6 +17,12 @@ class LLMProxy:
         if settings.cerebras_api_key:
             os.environ["CEREBRAS_API_KEY"] = settings.cerebras_api_key
         
+    def get_llm(self, provider: str, model: str) -> str:
+        """
+        Returns a formatted string compatible with crewAI and litellm.
+        """
+        return f"{provider}/{model}"
+
     def complete(self, model: Optional[str] = None, messages: List[Dict[str, str]] = [], **kwargs: Any):
         target_model = model or settings.default_model
         response = completion(model=target_model, messages=messages, **kwargs)

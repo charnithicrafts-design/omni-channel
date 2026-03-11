@@ -40,13 +40,19 @@ class AgentRegistry:
                     return
 
                 # Support both flat lists and categorized (agents/tasks) formats
+                agents_data = []
+                tasks_data = []
+                
                 if isinstance(data, dict):
                     agents_data = data.get("agents", [])
                     tasks_data = data.get("tasks", [])
-                else:
-                    # Fallback or hybrid logic if needed
-                    agents_data = []
-                    tasks_data = []
+                elif isinstance(data, list):
+                    # Distinguish by key fields
+                    for item in data:
+                        if "role" in item and "goal" in item:
+                            agents_data.append(item)
+                        elif "description" in item and "expected_output" in item:
+                            tasks_data.append(item)
 
                 for agent_data in agents_data:
                     agent = AgentConfig(**agent_data)

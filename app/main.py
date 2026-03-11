@@ -1,9 +1,18 @@
 import uuid
+import app.patch_pydantic # Early patch for Python 3.14
+from pathlib import Path
 from typing import Dict, Any, Optional
 from fastapi import FastAPI, BackgroundTasks, HTTPException
 from pydantic import BaseModel
+from app.agents import AgentRegistry
+from app.agent_factory import AgentFactory
 
 app = FastAPI(title="Omni-Channel AI Workflow Manager")
+
+# Initialization
+registry = AgentRegistry(Path("app/resources/agents.yaml"))
+registry.load_configs()
+factory = AgentFactory()
 
 # Mock job storage for now. In Phase 3, we'll use local storage.
 jobs: Dict[str, Dict[str, Any]] = {}
@@ -22,14 +31,53 @@ def read_root():
 
 async def run_workflow(job_id: str, workflow_name: str, inputs: Dict[str, Any]):
     """
-    Simulate workflow execution.
-    In Phase 3, this will call the AgentFactory and crewAI.
+    Executes a crewAI workflow using loaded configs.
     """
     jobs[job_id]["status"] = "in_progress"
-    # Simulate work
-    # import time; time.sleep(2)
-    jobs[job_id]["status"] = "completed"
-    jobs[job_id]["result"] = f"Workflow '{workflow_name}' completed with inputs {inputs}"
+    
+    try:
+        from crewai import Crew
+        
+        # Determine agents and tasks for this workflow (Simplified for Phase 2/3 prototype)
+        # In a real app, this logic would be more sophisticated.
+        workflow_agents_map = {}
+        workflow_tasks = []
+        
+        # Load all agents/tasks for now as a demonstration
+        for agent_name in registry.agents:
+            config = registry.get_agent_config(agent_name)
+            agent = factory.create_agent(config)
+            workflow_agents_map[agent_name] = agent
+            
+        for task_name in registry.tasks:
+            config = registry.get_task_config(task_name)
+            # Find the agent for this task
+            agent = workflow_agents_map.get(config.agent_name)
+            if agent:
+                task = factory.create_task(config, agent)
+                workflow_tasks.append(task)
+
+        if not workflow_tasks:
+            jobs[job_id]["status"] = "failed"
+            jobs[job_id]["error"] = "No tasks found for workflow"
+            return
+
+        # Create and kick off the crew
+        crew = Crew(
+            agents=list(workflow_agents_map.values()),
+            tasks=workflow_tasks,
+            verbose=True
+        )
+        
+        result = crew.kickoff(inputs=inputs)
+        
+        jobs[job_id]["status"] = "completed"
+        jobs[job_id]["result"] = str(result)
+        
+    except Exception as e:
+        jobs[job_id]["status"] = "failed"
+        jobs[job_id]["error"] = str(e)
+        print(f"Workflow execution failed: {e}")
 
 @app.post("/workflows/trigger", response_model=WorkflowResponse, status_code=202)
 async def trigger_workflow(trigger: WorkflowTrigger, background_tasks: BackgroundTasks):
