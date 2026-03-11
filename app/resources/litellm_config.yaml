@@ -1,0 +1,29 @@
+model_list:
+  - model_name: ollama/lfm2.5-thinking:1.2b
+    litellm_params:
+      model: ollama_chat/lfm2.5-thinking:1.2b
+      api_base: "http://ollama:11434"
+  
+  - model_name: ollama/qwen3.5:2b
+    litellm_params:
+      model: ollama_chat/qwen3.5:2b
+      api_base: "http://ollama:11434"
+
+  - model_name: ollama/qwen3-vl:4b
+    litellm_params:
+      model: ollama_chat/qwen3-vl:4b
+      api_base: "http://ollama:11434"
+
+  - model_name: groq/llama-3.3-70b-versatile
+    litellm_params:
+      model: groq/llama-3.3-70b-versatile
+      api_key: "os.environ/GROQ_API_KEY"
+    fallbacks: ["ollama/qwen3.5:2b"]
+
+router_settings:
+  routing_strategy: simple-shuffle
+  set_verbose: true
+
+litellm_settings:
+  set_verbose: true
+  drop_params: true

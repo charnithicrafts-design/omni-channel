@@ -5,6 +5,12 @@ import os
 
 class LLMProxy:
     def __init__(self):
+        # Load LiteLLM config if it exists
+        config_path = os.path.join(os.path.dirname(__file__), "resources", "litellm_config.yaml")
+        if os.path.exists(config_path):
+            import litellm
+            litellm.config_path = config_path
+        
         # Set environment variables for litellm if they are available in settings
         if settings.openai_api_key:
             os.environ["OPENAI_API_KEY"] = settings.openai_api_key

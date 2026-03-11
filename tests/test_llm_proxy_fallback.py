@@ -1,5 +1,6 @@
 import pytest
 import unittest.mock as mock
+import os
 from app.llm_proxy import LLMProxy
 import litellm
 
@@ -67,3 +68,23 @@ def test_llm_proxy_supports_fallbacks_param():
         args, kwargs = mock_completion.call_args
         assert "fallbacks" in kwargs
         assert kwargs["fallbacks"] == ["ollama/qwen3.5:2b"]
+
+def test_litellm_config_exists():
+    config_path = "app/resources/litellm_config.yaml"
+    assert os.path.exists(config_path)
+
+def test_litellm_config_content():
+    import yaml
+    config_path = "app/resources/litellm_config.yaml"
+    with open(config_path, "r") as f:
+        config = yaml.safe_load(f)
+    
+    assert "model_list" in config
+    models = [m["model_name"] for m in config["model_list"]]
+    assert "ollama/qwen3.5:2b" in models
+    assert "groq/llama-3.3-70b-versatile" in models
+    
+    # Check if Groq has fallback
+    groq_model = next(m for m in config["model_list"] if m["model_name"] == "groq/llama-3.3-70b-versatile")
+    assert "fallbacks" in groq_model
+    assert "ollama/qwen3.5:2b" in groq_model["fallbacks"]
