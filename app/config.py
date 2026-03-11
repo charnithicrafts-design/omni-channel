@@ -15,6 +15,8 @@ class Settings(BaseSettings):
     openai_api_key: str | None = None
     anthropic_api_key: str | None = None
     google_api_key: str | None = None
+    groq_api_key: str | None = None
+    cerebras_api_key: str | None = None
     ollama_api_base: str = "http://localhost:11434"
     
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")

@@ -12,6 +12,10 @@ class LLMProxy:
             os.environ["ANTHROPIC_API_KEY"] = settings.anthropic_api_key
         if settings.google_api_key:
             os.environ["GOOGLE_API_KEY"] = settings.google_api_key
+        if settings.groq_api_key:
+            os.environ["GROQ_API_KEY"] = settings.groq_api_key
+        if settings.cerebras_api_key:
+            os.environ["CEREBRAS_API_KEY"] = settings.cerebras_api_key
         
     def complete(self, model: Optional[str] = None, messages: List[Dict[str, str]] = [], **kwargs: Any):
         target_model = model or settings.default_model
