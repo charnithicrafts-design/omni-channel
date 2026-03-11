@@ -30,7 +30,7 @@
 - [x] Task: Docker Health Check Implementation (2949e88)
     - [x] Add `healthcheck` to `ollama` service in `docker-compose.yml`.
     - [x] Add `depends_on` with `service_healthy` condition to the `app` service.
-- [ ] Task: TDD - System Readiness API
-    - [ ] Write tests for a new `/health/ready` endpoint that checks Ollama connectivity and model availability.
-    - [ ] Implement the endpoint in `app/main.py`.
+- [x] Task: TDD - System Readiness API (5dd5253)
+    - [x] Write tests for a new `/health/ready` endpoint that checks Ollama connectivity and model availability.
+    - [x] Implement the endpoint in `app/main.py`.
 - [ ] Task: Conductor - User Manual Verification 'Phase 4' (Protocol in workflow.md)
