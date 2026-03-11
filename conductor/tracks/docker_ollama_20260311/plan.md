@@ -27,9 +27,9 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md) (108237)
 
 ## Phase 4: Health Checks & Readiness
-- [ ] Task: Docker Health Check Implementation
-    - [ ] Add `healthcheck` to `ollama` service in `docker-compose.yml`.
-    - [ ] Add `depends_on` with `service_healthy` condition to the `app` service.
+- [x] Task: Docker Health Check Implementation (2949e88)
+    - [x] Add `healthcheck` to `ollama` service in `docker-compose.yml`.
+    - [x] Add `depends_on` with `service_healthy` condition to the `app` service.
 - [ ] Task: TDD - System Readiness API
     - [ ] Write tests for a new `/health/ready` endpoint that checks Ollama connectivity and model availability.
     - [ ] Implement the endpoint in `app/main.py`.
