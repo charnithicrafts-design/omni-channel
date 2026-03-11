@@ -33,4 +33,4 @@
 - [x] Task: TDD - System Readiness API (5dd5253)
     - [x] Write tests for a new `/health/ready` endpoint that checks Ollama connectivity and model availability.
     - [x] Implement the endpoint in `app/main.py`.
-- [ ] Task: Conductor - User Manual Verification 'Phase 4' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 4' (Protocol in workflow.md) (113680)
