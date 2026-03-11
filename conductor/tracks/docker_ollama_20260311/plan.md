@@ -1,6 +1,6 @@
 # Implementation Plan: One-Click Docker-Ollama Integration & Fallback
 
-## Phase 1: Docker & Ollama Infrastructure
+## Phase 1: Docker & Ollama Infrastructure [checkpoint: bcce62a]
 - [x] Task: Docker Compose Base Setup (823fb2d)
     - [x] Create `docker-compose.yml` with `app` and `ollama` services.
     - [x] Configure networking and volume persistence for Ollama models.
