@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Build Core FastAPI Workflow Manager with Unified LLM Proxy Integration**
+- [~] **Track: Build Core FastAPI Workflow Manager with Unified LLM Proxy Integration**
   *Link: [./tracks/core_workflow_manager_20260311/](./tracks/core_workflow_manager_20260311/)*
