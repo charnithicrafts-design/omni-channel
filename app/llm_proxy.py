@@ -25,6 +25,7 @@ class LLMProxy:
 
     def complete(self, model: Optional[str] = None, messages: List[Dict[str, str]] = [], **kwargs: Any):
         target_model = model or settings.default_model
+        # LiteLLM supports built-in fallbacks if a list is provided in the fallbacks parameter
         response = completion(model=target_model, messages=messages, **kwargs)
         return response.choices[0].message.content
 
