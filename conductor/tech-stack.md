@@ -10,6 +10,7 @@
 
 ## Unified AI Interface
 - **Unified LLM Proxy (LiteLLM):** A single interface for integrating and managing multiple AI model providers (Google, OpenAI, Anthropic, Groq, Cerebras, Ollama, etc.) with a consistent API.
+- **Local LLM Sidecar (Ollama):** For local, privacy-preserving, and cost-free model execution with automated provisioning.
 - **Monkeypatching (Python 3.14):** Custom patches for `pydantic.v1` to ensure compatibility with `crewAI` and `langchain` on the latest Python versions.
 
 ## Database & Storage
