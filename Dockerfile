@@ -17,9 +17,13 @@ RUN pip install --no-cache-dir .
 
 # Copy application code
 COPY app/ app/
+COPY scripts/ scripts/
+
+# Make scripts executable (just in case)
+RUN chmod +x scripts/*.sh
 
 # Expose the application port
 EXPOSE 8000
 
-# Command to run the application
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Set the entrypoint
+ENTRYPOINT ["./scripts/entrypoint.sh"]

@@ -30,3 +30,15 @@ def test_pull_models_wait_logic():
     assert "wait_for_ollama" in content
     assert "max_retries" in content
     assert "sleep 2" in content
+
+def test_entrypoint_exists():
+    assert os.path.exists("scripts/entrypoint.sh")
+    assert os.access("scripts/entrypoint.sh", os.X_OK)
+
+def test_entrypoint_logic():
+    with open("scripts/entrypoint.sh", "r") as f:
+        content = f.read()
+    
+    assert "pull_models.sh" in content
+    assert "uvicorn" in content
+    assert "exec" in content
