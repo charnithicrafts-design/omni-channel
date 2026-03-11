@@ -4,9 +4,9 @@
 - [x] Task: Project Scaffolding (414e3da)
     - [x] Initialize FastAPI project with core dependencies.
     - [x] Configure local storage and configuration manager.
-- [ ] Task: Unified LLM Proxy Integration
-    - [ ] Integrate a unified LLM proxy (e.g., LiteLLM) for multiple model providers.
-    - [ ] Define standardized LLM interface and configuration.
+- [x] Task: Unified LLM Proxy Integration (c404e19)
+    - [x] Integrate a unified LLM proxy (e.g., LiteLLM) for multiple model providers.
+    - [x] Define standardized LLM interface and configuration.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ## Phase 2: Workflow & Agent Orchestration
