@@ -18,7 +18,7 @@
     - [x] Update `Dockerfile` to use this entrypoint.
 - [x] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md) (98151)
 
-## Phase 3: LLM Proxy Integration & Fallback
+## Phase 3: LLM Proxy Integration & Fallback [checkpoint: a0ad5c0]
 - [x] Task: TDD - LLM Proxy Fallback Logic (e7f5a29)
     - [x] Write tests in `tests/test_llm_proxy_fallback.py` to simulate 429 errors and verify fallback to Ollama.
     - [x] Update `app/llm_proxy.py` to support LiteLLM fallback configurations.
