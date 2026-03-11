@@ -18,9 +18,9 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2' (2c550a7)
 
 ## Phase 3: Integration & Testing
-- [ ] Task: End-to-End Workflow Testing
-    - [ ] Develop automated tests for representative workflows (e.g., Market Research).
-    - [ ] Verify multi-provider LLM support through the proxy.
+- [x] Task: End-to-End Workflow Testing (6a548b2)
+    - [x] Develop automated tests for representative workflows (e.g., Market Research).
+    - [x] Verify multi-provider LLM support through the proxy.
 - [ ] Task: Documentation & Finalization
     - [ ] Document the core API and configuration format.
     - [ ] Perform a final code audit and cleanup.
