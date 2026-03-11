@@ -4,4 +4,4 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [x] **Track: Build Core FastAPI Workflow Manager with Unified LLM Proxy Integration**
+No active tracks. Use `/conductor:create-track` to start a new track.
