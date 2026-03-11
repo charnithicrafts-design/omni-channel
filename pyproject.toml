@@ -15,7 +15,8 @@ dependencies = [
 test = [
     "pytest",
     "pytest-cov",
-    "httpx"
+    "httpx",
+    "pyyaml"
 ]
 
 [build-system]
