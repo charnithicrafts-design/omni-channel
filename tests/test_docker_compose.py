@@ -48,3 +48,19 @@ def test_dockerfile_content():
     assert "COPY pyproject.toml ." in content
     assert "pip install" in content
     assert "ENTRYPOINT [\"./scripts/entrypoint.sh\"]" in content
+
+def test_docker_compose_healthcheck():
+    with open("docker-compose.yml", "r") as f:
+        config = yaml.safe_load(f)
+    
+    ollama = config["services"]["ollama"]
+    assert "healthcheck" in ollama
+    assert "test" in ollama["healthcheck"]
+    
+    app = config["services"]["app"]
+    assert "depends_on" in app
+    if isinstance(app["depends_on"], list):
+        assert "ollama" in app["depends_on"]
+    elif isinstance(app["depends_on"], dict):
+        assert "ollama" in app["depends_on"]
+        assert app["depends_on"]["ollama"]["condition"] == "service_healthy"
