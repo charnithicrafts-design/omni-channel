@@ -9,7 +9,8 @@
 - **crewAI (Python):** For task-oriented AI agent orchestration and workflow logic.
 
 ## Unified AI Interface
-- **Unified LLM Proxy (e.g., LiteLLM or similar):** A single interface for integrating and managing multiple AI model providers (Google, OpenAI, Anthropic, Ollama, etc.) with a consistent API.
+- **Unified LLM Proxy (LiteLLM):** A single interface for integrating and managing multiple AI model providers (Google, OpenAI, Anthropic, Groq, Cerebras, Ollama, etc.) with a consistent API.
+- **Monkeypatching (Python 3.14):** Custom patches for `pydantic.v1` to ensure compatibility with `crewAI` and `langchain` on the latest Python versions.
 
 ## Database & Storage
 - **PostgreSQL:** For structured data, persistent logs, and long-term storage of user data.
