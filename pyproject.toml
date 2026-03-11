@@ -8,7 +8,8 @@ dependencies = [
     "crewai",
     "litellm",
     "pydantic",
-    "python-dotenv"
+    "python-dotenv",
+    "httpx"
 ]
 
 [project.optional-dependencies]
@@ -17,7 +18,8 @@ test = [
     "pytest-cov",
     "httpx",
     "pyyaml",
-    "requests-mock"
+    "requests-mock",
+    "respx"
 ]
 
 [build-system]

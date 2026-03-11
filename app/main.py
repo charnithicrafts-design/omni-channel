@@ -1,13 +1,18 @@
 import uuid
 import app.patch_pydantic # Early patch for Python 3.14
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 from fastapi import FastAPI, BackgroundTasks, HTTPException
+import httpx
+import os
 from pydantic import BaseModel
 from app.agents import AgentRegistry
 from app.agent_factory import AgentFactory
+from app.config import settings
 
 app = FastAPI(title="Omni-Channel AI Workflow Manager")
+
+REQUIRED_MODELS = ["lfm2.5-thinking:1.2b", "qwen3.5:2b", "qwen3-vl:4b"]
 
 # Initialization
 registry = AgentRegistry(Path("app/resources/agents.yaml"))
@@ -28,6 +33,34 @@ class WorkflowResponse(BaseModel):
 @app.get("/")
 def read_root():
     return {"message": "Welcome to Omni-Channel AI Workflow Manager"}
+
+@app.get("/health/ready")
+async def readiness_check():
+    """
+    Checks if the Ollama server is reachable and all required models are pulled.
+    """
+    ollama_url = os.getenv("OLLAMA_BASE_URL", settings.ollama_api_base)
+    
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get(f"{ollama_url}/api/tags")
+            if response.status_code != 200:
+                raise HTTPException(status_code=503, detail="Ollama returned non-200 status")
+            
+            data = response.json()
+            models = data.get("models", [])
+            pulled_models = [m["name"] for m in models]
+            
+            # Ollama tags might include :latest or other tags, but we check for exact match or name
+            missing_models = [m for m in REQUIRED_MODELS if not any(m in pm for pm in pulled_models)]
+            
+            if missing_models:
+                raise HTTPException(status_code=503, detail=f"Missing models: {', '.join(missing_models)}")
+                
+            return {"status": "ready", "models": pulled_models}
+            
+    except httpx.RequestError as e:
+        raise HTTPException(status_code=503, detail=f"Ollama unreachable: {str(e)}")
 
 async def run_workflow(job_id: str, workflow_name: str, inputs: Dict[str, Any]):
     """
