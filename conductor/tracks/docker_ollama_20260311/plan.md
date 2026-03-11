@@ -22,8 +22,8 @@
 - [x] Task: TDD - LLM Proxy Fallback Logic (e7f5a29)
     - [x] Write tests in `tests/test_llm_proxy_fallback.py` to simulate 429 errors and verify fallback to Ollama.
     - [x] Update `app/llm_proxy.py` to support LiteLLM fallback configurations.
-- [ ] Task: LiteLLM Configuration
-    - [ ] Create/Update `app/resources/litellm_config.yaml` with local Ollama endpoints and fallback lists.
+- [x] Task: LiteLLM Configuration (98314f4)
+    - [x] Create/Update `app/resources/litellm_config.yaml` with local Ollama endpoints and fallback lists.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md)
 
 ## Phase 4: Health Checks & Readiness
