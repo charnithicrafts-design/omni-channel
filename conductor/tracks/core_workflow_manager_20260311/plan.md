@@ -12,9 +12,9 @@
 - [x] Task: crewAI Agent Definition (e3636e1)
     - [x] Implement YAML-based configuration for crewAI agents and tasks.
     - [x] Develop agent registry and lifecycle management.
-- [ ] Task: FastAPI Workflow Triggers
-    - [ ] Create FastAPI endpoints for triggering workflows (e.g., via webhooks).
-    - [ ] Implement asynchronous task processing for workflow execution.
+- [x] Task: FastAPI Workflow Triggers (bb309ce)
+    - [x] Create FastAPI endpoints for triggering workflows (e.g., via webhooks).
+    - [x] Implement asynchronous task processing for workflow execution.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
 
 ## Phase 3: Integration & Testing
