@@ -26,7 +26,7 @@
     - [x] Create/Update `app/resources/litellm_config.yaml` with local Ollama endpoints and fallback lists.
 - [x] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md) (108237)
 
-## Phase 4: Health Checks & Readiness
+## Phase 4: Health Checks & Readiness [checkpoint: 2e824f8]
 - [x] Task: Docker Health Check Implementation (2949e88)
     - [x] Add `healthcheck` to `ollama` service in `docker-compose.yml`.
     - [x] Add `depends_on` with `service_healthy` condition to the `app` service.
