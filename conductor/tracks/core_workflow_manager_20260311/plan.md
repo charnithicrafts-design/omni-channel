@@ -17,11 +17,11 @@
     - [x] Implement asynchronous task processing for workflow execution.
 - [x] Task: Conductor - User Manual Verification 'Phase 2' (2c550a7)
 
-## Phase 3: Integration & Testing
+## Phase 3: Integration & Testing [checkpoint: beafa96]
 - [x] Task: End-to-End Workflow Testing (6a548b2)
     - [x] Develop automated tests for representative workflows (e.g., Market Research).
     - [x] Verify multi-provider LLM support through the proxy.
 - [x] Task: Documentation & Finalization (ffb0804)
     - [x] Document the core API and configuration format.
     - [x] Perform a final code audit and cleanup.
-- [ ] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 3' (beafa96)
