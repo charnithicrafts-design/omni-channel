@@ -16,7 +16,7 @@
 - [x] Task: Docker Entrypoint Integration (aebc4f6)
     - [x] Create `scripts/entrypoint.sh` to run the model puller before starting the FastAPI app.
     - [x] Update `Dockerfile` to use this entrypoint.
-- [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md) (98151)
 
 ## Phase 3: LLM Proxy Integration & Fallback
 - [ ] Task: TDD - LLM Proxy Fallback Logic

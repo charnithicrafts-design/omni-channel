@@ -47,4 +47,4 @@ def test_dockerfile_content():
     assert "WORKDIR /app" in content
     assert "COPY pyproject.toml ." in content
     assert "pip install" in content
-    assert "CMD [\"uvicorn\", \"app.main:app\"" in content
+    assert "ENTRYPOINT [\"./scripts/entrypoint.sh\"]" in content
