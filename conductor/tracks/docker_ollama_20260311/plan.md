@@ -10,9 +10,9 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md) (76802)
 
 ## Phase 2: Automated Model Provisioning
-- [ ] Task: Model Pulling Script
-    - [ ] Create `scripts/pull_models.sh` to pull **lfm2.5-thinking:1.2b**, **qwen3.5:2b**, and **qwen3-vl:4b**.
-    - [ ] Implement checks to avoid re-pulling existing models.
+- [x] Task: Model Pulling Script (9f88c46)
+    - [x] Create `scripts/pull_models.sh` to pull **lfm2.5-thinking:1.2b**, **qwen3.5:2b**, and **qwen3-vl:4b**.
+    - [x] Implement checks to avoid re-pulling existing models.
 - [ ] Task: Docker Entrypoint Integration
     - [ ] Create `scripts/entrypoint.sh` to run the model puller before starting the FastAPI app.
     - [ ] Update `Dockerfile` to use this entrypoint.
