@@ -4,9 +4,9 @@
 - [x] Task: Docker Compose Base Setup (823fb2d)
     - [x] Create `docker-compose.yml` with `app` and `ollama` services.
     - [x] Configure networking and volume persistence for Ollama models.
-- [ ] Task: Application Dockerization
-    - [ ] Create `Dockerfile` for the FastAPI application.
-    - [ ] Ensure all dependencies (LiteLLM, crewAI, etc.) are included.
+- [x] Task: Application Dockerization (2dc8681)
+    - [x] Create `Dockerfile` for the FastAPI application.
+    - [x] Ensure all dependencies (LiteLLM, crewAI, etc.) are included.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ## Phase 2: Automated Model Provisioning
