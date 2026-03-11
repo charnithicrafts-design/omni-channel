@@ -9,9 +9,9 @@
     - [x] Define standardized LLM interface and configuration.
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (525bc99)
 ## Phase 2: Workflow & Agent Orchestration
-- [ ] Task: crewAI Agent Definition
-    - [ ] Implement YAML-based configuration for crewAI agents and tasks.
-    - [ ] Develop agent registry and lifecycle management.
+- [x] Task: crewAI Agent Definition (e3636e1)
+    - [x] Implement YAML-based configuration for crewAI agents and tasks.
+    - [x] Develop agent registry and lifecycle management.
 - [ ] Task: FastAPI Workflow Triggers
     - [ ] Create FastAPI endpoints for triggering workflows (e.g., via webhooks).
     - [ ] Implement asynchronous task processing for workflow execution.
