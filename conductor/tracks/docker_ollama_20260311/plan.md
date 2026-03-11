@@ -9,7 +9,7 @@
     - [x] Ensure all dependencies (LiteLLM, crewAI, etc.) are included.
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md) (76802)
 
-## Phase 2: Automated Model Provisioning
+## Phase 2: Automated Model Provisioning [checkpoint: 8cca23f]
 - [x] Task: Model Pulling Script (9f88c46)
     - [x] Create `scripts/pull_models.sh` to pull **lfm2.5-thinking:1.2b**, **qwen3.5:2b**, and **qwen3-vl:4b**.
     - [x] Implement checks to avoid re-pulling existing models.
