@@ -1,0 +1,27 @@
+[project]
+name = "omni-channel"
+version = "0.1.0"
+description = "Build a fully free, open-source, omni-channel AI workflow application."
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "crewai",
+    "litellm",
+    "pydantic",
+    "python-dotenv"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+    "httpx"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
