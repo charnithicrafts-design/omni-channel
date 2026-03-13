@@ -7,7 +7,7 @@
 - [x] Task: Routing & Global State Configuration (5c03018)
     - [ ] Set up the router (e.g., React Router 7 or TanStack Router).
     - [ ] Implement a lightweight global state for user context and workflow settings (e.g., Zustand or Context API).
-- [ ] Task: Layout Shell & Navigation
+- [x] Task: Layout Shell & Navigation (6e775c9)
     - [ ] Create a responsive layout shell with a sidebar or top navigation.
     - [ ] Implement the basic navigation between the Dashboard and Wizard modules.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
