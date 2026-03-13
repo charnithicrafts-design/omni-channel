@@ -28,7 +28,7 @@
 - [x] Task: Data Visualization with Recharts (584dea1)
     - [ ] Write tests for chart data transformation and rendering.
     - [ ] Integrate Recharts and implement live, interactive charts for research insights.
-- [ ] Task: Report Viewer & Export Tools
+- [x] Task: Report Viewer & Export Tools (b4ff379)
     - [ ] Implement a polished view for AI-generated summaries.
     - [ ] Add functionality to export reports to PDF and generate shareable links.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md)
