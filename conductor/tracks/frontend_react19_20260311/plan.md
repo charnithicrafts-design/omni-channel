@@ -21,7 +21,7 @@
     - [ ] Implement progress indicators and navigation controls (Next, Back, Cancel).
 - [x] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md) (95bce71)
 
-## Phase 3: Market Research Module
+## Phase 3: Market Research Module [checkpoint: 2f1362e]
 - [x] Task: Query Builder Interface (30516a8)
     - [ ] Write tests for the Query Builder form validation and state updates.
     - [ ] Implement the Query Builder UI with dynamic fields for research parameters.
@@ -31,7 +31,7 @@
 - [x] Task: Report Viewer & Export Tools (b4ff379)
     - [ ] Implement a polished view for AI-generated summaries.
     - [ ] Add functionality to export reports to PDF and generate shareable links.
-- [ ] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md) (2f1362e)
 
 ## Phase 4: Photography Album Module
 - [ ] Task: Media Uploader Component
