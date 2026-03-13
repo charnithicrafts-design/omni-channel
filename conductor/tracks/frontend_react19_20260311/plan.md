@@ -4,7 +4,7 @@
 - [x] Task: React 19 & Tailwind CSS v4 Setup (9bcedf8)
     - [ ] Initialize a new React 19 project (e.g., using Vite).
     - [ ] Configure Tailwind CSS v4 and set up the design tokens (colors, typography).
-- [ ] Task: Routing & Global State Configuration
+- [x] Task: Routing & Global State Configuration (5c03018)
     - [ ] Set up the router (e.g., React Router 7 or TanStack Router).
     - [ ] Implement a lightweight global state for user context and workflow settings (e.g., Zustand or Context API).
 - [ ] Task: Layout Shell & Navigation
