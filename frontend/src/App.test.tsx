@@ -10,7 +10,8 @@ describe('App Routing', () => {
         <App />
       </MemoryRouter>
     )
-    expect(screen.getByText(/Dashboard/i)).toBeInTheDocument()
+    // Check for the heading in the main content
+    expect(screen.getByRole('heading', { name: /Dashboard/i, level: 2 })).toBeInTheDocument()
   })
 
   it('renders the Wizard page when navigating to /wizard', () => {
@@ -19,6 +20,7 @@ describe('App Routing', () => {
         <App />
       </MemoryRouter>
     )
-    expect(screen.getByText(/Wizard/i)).toBeInTheDocument()
+    // Check for the heading in the main content
+    expect(screen.getByRole('heading', { name: /Wizard/i, level: 2 })).toBeInTheDocument()
   })
 })
