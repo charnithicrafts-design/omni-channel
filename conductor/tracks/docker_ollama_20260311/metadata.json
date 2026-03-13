@@ -1,8 +1,0 @@
-{
-  "track_id": "docker_ollama_20260311",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-03-11T13:39:01Z",
-  "updated_at": "2026-03-11T13:39:01Z",
-  "description": "one-click docker deployment with sidecar ollama, auto-pulling lfm2.5-thinking:1.2b, qwen3.5:2b, and qwen3-vl:4b, and fallback logic via litellm."
-}
