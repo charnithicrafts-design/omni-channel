@@ -12,14 +12,14 @@
     - [ ] Implement the basic navigation between the Dashboard and Wizard modules.
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md) (251cc4c)
 
-## Phase 2: Common Components & Wizard Framework
+## Phase 2: Common Components & Wizard Framework [checkpoint: 95bce71]
 - [x] Task: Design & Implementation of Core UI Components (416d1f3)
     - [ ] Write tests for common components (Button, Input, Card, Modal, etc.).
     - [ ] Implement the core components using Tailwind v4.
 - [x] Task: Wizard Framework Implementation (9569911)
     - [ ] Build a generic, multi-step wizard component that handles state transitions.
     - [ ] Implement progress indicators and navigation controls (Next, Back, Cancel).
-- [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md) (95bce71)
 
 ## Phase 3: Market Research Module
 - [ ] Task: Query Builder Interface
