@@ -34,7 +34,7 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md) (2f1362e)
 
 ## Phase 4: Photography Album Module
-- [ ] Task: Media Uploader Component
+- [x] Task: Media Uploader Component (9b271eb)
     - [ ] Write tests for file upload handling and progress tracking.
     - [ ] Implement a high-performance drag-and-drop uploader with real-time feedback.
 - [ ] Task: Theme Selector & Live Preview
