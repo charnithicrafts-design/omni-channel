@@ -20,7 +20,7 @@ describe('App Routing', () => {
         <App />
       </MemoryRouter>
     )
-    // Check for the heading in the main content
-    expect(screen.getByRole('heading', { name: /Wizard/i, level: 2 })).toBeInTheDocument()
+    // The Wizard uses Card which has an h3 for the step title
+    expect(screen.getByRole('heading', { name: /Select Workflow/i, level: 3 })).toBeInTheDocument()
   })
 })
