@@ -13,7 +13,7 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md) (251cc4c)
 
 ## Phase 2: Common Components & Wizard Framework
-- [ ] Task: Design & Implementation of Core UI Components
+- [x] Task: Design & Implementation of Core UI Components (416d1f3)
     - [ ] Write tests for common components (Button, Input, Card, Modal, etc.).
     - [ ] Implement the core components using Tailwind v4.
 - [ ] Task: Wizard Framework Implementation
