@@ -37,7 +37,7 @@
 - [x] Task: Media Uploader Component (9b271eb)
     - [ ] Write tests for file upload handling and progress tracking.
     - [ ] Implement a high-performance drag-and-drop uploader with real-time feedback.
-- [ ] Task: Theme Selector & Live Preview
+- [x] Task: Theme Selector & Live Preview (2a9f7b7)
     - [ ] Create a visual Theme Selector for curated layouts.
     - [ ] Implement a Live Preview window that displays the generated album site in real-time.
 - [ ] Task: Deployment Status & Results
