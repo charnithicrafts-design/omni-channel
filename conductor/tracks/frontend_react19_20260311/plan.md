@@ -22,7 +22,7 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md) (95bce71)
 
 ## Phase 3: Market Research Module
-- [ ] Task: Query Builder Interface
+- [x] Task: Query Builder Interface (30516a8)
     - [ ] Write tests for the Query Builder form validation and state updates.
     - [ ] Implement the Query Builder UI with dynamic fields for research parameters.
 - [ ] Task: Data Visualization with Recharts
