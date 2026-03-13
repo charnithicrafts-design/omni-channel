@@ -33,7 +33,7 @@
     - [ ] Add functionality to export reports to PDF and generate shareable links.
 - [x] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md) (2f1362e)
 
-## Phase 4: Photography Album Module
+## Phase 4: Photography Album Module [checkpoint: 9b766f2]
 - [x] Task: Media Uploader Component (9b271eb)
     - [ ] Write tests for file upload handling and progress tracking.
     - [ ] Implement a high-performance drag-and-drop uploader with real-time feedback.
@@ -43,7 +43,7 @@
 - [x] Task: Deployment Status & Results (88447d3)
     - [ ] Implement visual indicators for model processing and site hosting status.
     - [ ] Show the final deployment link with clear next steps for the user.
-- [ ] Task: Conductor - User Manual Verification 'Phase 4' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 4' (Protocol in workflow.md) (9b766f2)
 
 ## Phase 5: Integration & Polish
 - [ ] Task: Unified Portal Finalization
