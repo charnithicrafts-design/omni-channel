@@ -11,16 +11,26 @@ describe('App Routing', () => {
       </MemoryRouter>
     )
     // Check for the heading in the main content
-    expect(screen.getByRole('heading', { name: /Dashboard/i, level: 2 })).toBeInTheDocument()
+    expect(screen.getByText(/Create/i, { selector: 'h1' })).toBeInTheDocument()
   })
 
-  it('renders the Wizard page when navigating to /wizard', () => {
+  it('renders the Research Wizard when type=research', () => {
     render(
-      <MemoryRouter initialEntries={['/wizard']}>
+      <MemoryRouter initialEntries={['/wizard?type=research']}>
         <App />
       </MemoryRouter>
     )
     // The Wizard uses Card which has an h3 for the step title
     expect(screen.getByRole('heading', { name: /Configure Research/i, level: 3 })).toBeInTheDocument()
+  })
+
+  it('renders the Album Wizard when type=album', () => {
+    render(
+      <MemoryRouter initialEntries={['/wizard?type=album']}>
+        <App />
+      </MemoryRouter>
+    )
+    // The Wizard uses Card which has an h3 for the step title
+    expect(screen.getByRole('heading', { name: /Photography: Upload & Theme/i, level: 3 })).toBeInTheDocument()
   })
 })
