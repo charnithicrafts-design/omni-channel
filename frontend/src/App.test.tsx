@@ -21,6 +21,6 @@ describe('App Routing', () => {
       </MemoryRouter>
     )
     // The Wizard uses Card which has an h3 for the step title
-    expect(screen.getByRole('heading', { name: /Select Workflow/i, level: 3 })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Configure Research/i, level: 3 })).toBeInTheDocument()
   })
 })
