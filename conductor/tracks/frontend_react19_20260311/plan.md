@@ -25,7 +25,7 @@
 - [x] Task: Query Builder Interface (30516a8)
     - [ ] Write tests for the Query Builder form validation and state updates.
     - [ ] Implement the Query Builder UI with dynamic fields for research parameters.
-- [ ] Task: Data Visualization with Recharts
+- [x] Task: Data Visualization with Recharts (584dea1)
     - [ ] Write tests for chart data transformation and rendering.
     - [ ] Integrate Recharts and implement live, interactive charts for research insights.
 - [ ] Task: Report Viewer & Export Tools
