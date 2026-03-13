@@ -16,7 +16,7 @@
 - [x] Task: Design & Implementation of Core UI Components (416d1f3)
     - [ ] Write tests for common components (Button, Input, Card, Modal, etc.).
     - [ ] Implement the core components using Tailwind v4.
-- [ ] Task: Wizard Framework Implementation
+- [x] Task: Wizard Framework Implementation (7d7790a)
     - [ ] Build a generic, multi-step wizard component that handles state transitions.
     - [ ] Implement progress indicators and navigation controls (Next, Back, Cancel).
 - [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
