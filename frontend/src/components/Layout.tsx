@@ -11,7 +11,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const navItems = [
     { name: 'Dashboard', path: '/' },
-    { name: 'Wizard', path: '/wizard' },
   ]
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)

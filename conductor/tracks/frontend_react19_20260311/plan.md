@@ -43,7 +43,7 @@
 - [x] Task: Deployment Status & Results (88447d3)
     - [ ] Implement visual indicators for model processing and site hosting status.
     - [ ] Show the final deployment link with clear next steps for the user.
-- [ ] Task: Conductor - User Manual Verification 'Phase 4' (Protocol in workflow.md)
+- [~] Task: Conductor - User Manual Verification 'Phase 4' (Protocol in workflow.md)
 
 ## Phase 5: Integration & Polish
 - [ ] Task: Unified Portal Finalization

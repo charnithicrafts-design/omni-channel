@@ -29,11 +29,15 @@ const LivePreview: React.FC<LivePreviewProps> = ({ themeId, images, albumTitle =
             images.map((img, i) => (
               <div 
                 key={i} 
-                className={`aspect-square rounded shadow-sm flex items-center justify-center text-xs font-medium border
+                className={`aspect-square rounded overflow-hidden shadow-sm flex items-center justify-center text-xs font-medium border
                   ${isDark ? 'bg-gray-800 border-gray-700 text-gray-400' : isVibrant ? 'bg-orange-100 border-orange-200 text-orange-600' : 'bg-gray-50 border-gray-100 text-gray-500'}
                 `}
               >
-                Image {i + 1}
+                <img 
+                  src={img} 
+                  alt={`Album Image ${i + 1}`} 
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))
           ) : (
