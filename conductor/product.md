@@ -37,6 +37,8 @@ To build a fully free, open-source, omni-channel workflow application that lever
 ## Core Features
 - **YAML-based crewAI Configurator:** A flexible, configuration-driven system for defining task-based AI agents and workflows.
 - **Unified LLM Proxy Integration:** A centralized interface (via LiteLLM) supporting multiple providers like Groq, Cerebras, and Ollama.
+- **Professional Wizard-Driven UI:** A React 19 frontend providing a guided, multi-step experience for complex AI workflows.
+- **Interactive Data Visualization:** Real-time charts and insights using Recharts for research and analysis tasks.
 - **One-Click Docker-Ollama Sidecar:** Seamless local deployment with a sidecar Ollama container and automated model provisioning for cost-free testing and fallback.
 - **One-click Website Generation/Deployment:** Automated pipelines for generating and hosting static sites (e.g., for photographers).
 - **Omni-channel Connectivity:** Seamless integration between various triggers (e.g., n8n webhooks, photo uploads) and outputs (e.g., email, PDF, dashboard).

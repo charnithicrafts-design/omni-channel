@@ -4,9 +4,12 @@
 - **Python:** Primary language for crewAI orchestration, task-based agents, and FastAPI development.
 - **TypeScript:** For potential web services, dashboard development, and frontend integration.
 
-## Frameworks
+## Frameworks & Libraries
 - **FastAPI (Python):** For high-performance, modern API development.
 - **crewAI (Python):** For task-oriented AI agent orchestration and workflow logic.
+- **React 19 (TypeScript):** For the modern, performant, and responsive user interface.
+- **Tailwind CSS v4:** A CSS-first utility framework for rapid and modern UI development.
+- **Recharts (TypeScript):** For dynamic and responsive data visualization and insights.
 
 ## Unified AI Interface
 - **Unified LLM Proxy (LiteLLM):** A single interface for integrating and managing multiple AI model providers (Google, OpenAI, Anthropic, Groq, Cerebras, Ollama, etc.) with a consistent API.
