@@ -2,14 +2,14 @@
 
 ## Phase 1: Project Scaffolding & Design Foundation [checkpoint: 251cc4c]
 - [x] Task: React 19 & Tailwind CSS v4 Setup (9bcedf8)
-    - [ ] Initialize a new React 19 project (e.g., using Vite).
-    - [ ] Configure Tailwind CSS v4 and set up the design tokens (colors, typography).
-- [x] Task: Routing & Global State Configuration (5c03018)
-    - [ ] Set up the router (e.g., React Router 7 or TanStack Router).
-    - [ ] Implement a lightweight global state for user context and workflow settings (e.g., Zustand or Context API).
-- [x] Task: Layout Shell & Navigation (6e775c9)
-    - [ ] Create a responsive layout shell with a sidebar or top navigation.
-    - [ ] Implement the basic navigation between the Dashboard and Wizard modules.
+    - [x] Initialize a new React 19 project (e.g., using Vite).
+    - [x] Configure Tailwind CSS v4 and set up the design tokens (colors, typography).
+- [~] Task: Routing & Global State Configuration (5c03018)
+    - [~] Set up the router (e.g., React Router 7 or TanStack Router).
+    - [~] Implement a lightweight global state for user context and workflow settings (e.g., Zustand or Context API).
+- [~] Task: Layout Shell & Navigation (6e775c9)
+    - [~] Create a responsive layout shell with a sidebar or top navigation.
+    - [~] Implement the basic navigation between the Dashboard and Wizard modules.
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md) (251cc4c)
 
 ## Phase 2: Common Components & Wizard Framework [checkpoint: 95bce71]
@@ -48,10 +48,10 @@
 ## Phase 5: Integration & Polish
 - [x] Task: Unified Portal Finalization (d223835)
     - [ ] Finalize the Dashboard/Portal entry point to start new wizards or view recent projects.
-- [ ] Task: Responsive Audit & UI Polish
-    - [ ] Conduct a thorough audit for mobile responsiveness and accessibility.
-    - [ ] Apply final design touches and animations for a "professional" feel.
-- [ ] Task: Documentation & Cleanup
-    - [ ] Document the frontend architecture and key components.
-    - [ ] Perform a final code audit, cleanup, and optimization for production.
-- [ ] Task: Conductor - User Manual Verification 'Phase 5' (Protocol in workflow.md)
+- [x] Task: Responsive Audit & UI Polish
+    - [x] Conduct a thorough audit for mobile responsiveness and accessibility.
+    - [x] Apply final design touches and animations for a "professional" feel.
+- [x] Task: Documentation & Cleanup
+    - [x] Document the frontend architecture and key components.
+    - [x] Perform a final code audit, cleanup, and optimization for production.
+- [x] Task: Conductor - User Manual Verification 'Phase 5' (Protocol in workflow.md)

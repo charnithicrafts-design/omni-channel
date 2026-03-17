@@ -10,7 +10,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation()
 
   const navItems = [
-    { name: 'Dashboard', path: '/' },
+    { name: 'Dashboard', path: '/', icon: 'dashboard' },
+    { name: 'Wizard', path: '/wizard', icon: 'wizard' },
+    { name: 'Analytics', path: '/analytics', icon: 'analytics' },
+    { name: 'Settings', path: '/settings', icon: 'settings' },
   ]
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
