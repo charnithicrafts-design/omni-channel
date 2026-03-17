@@ -1,29 +1,122 @@
-import { Routes, Route, useNavigate, useSearchParams } from 'react-router'
-import { useState } from 'react'
+import { Routes, Route, useNavigate } from 'react-router'
+import { useState, useEffect } from 'react'
 import Layout from './components/Layout'
-import Dashboard from './components/Dashboard'
 import Wizard from './components/wizard/Wizard'
 import QueryBuilder from './components/research/QueryBuilder'
 import ResearchCharts from './components/research/ResearchCharts'
 import ReportViewer from './components/research/ReportViewer'
-import ThemeSelector from './components/wizard/ThemeSelector'
 import MediaUploader from './components/wizard/MediaUploader'
+import ThemeSelector from './components/wizard/ThemeSelector'
 import LivePreview from './components/wizard/LivePreview'
 import DeploymentStatus from './components/wizard/DeploymentStatus'
+import Card from './components/common/Card'
+import Button from './components/common/Button'
+import { useWorkflowStore } from './store/workflowStore'
 import './App.css'
+
+const Dashboard = () => {
+  const navigate = useNavigate()
+  const setWorkflowType = useWorkflowStore((state) => state.setWorkflowType)
+
+  const handleStartWorkflow = (type: 'research' | 'album') => {
+    setWorkflowType(type)
+    navigate('/wizard')
+  }
+
+  return (
+    <div className="max-w-6xl mx-auto">
+      <header className="mb-10">
+        <h2 className="text-4xl font-bold text-gray-900">Omni-Channel Portal</h2>
+        <p className="mt-3 text-lg text-gray-600">Select a workflow to automate your AI pipelines.</p>
+      </header>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Card title="Market Research" className="hover:shadow-md transition-shadow">
+          <div className="space-y-4">
+            <p className="text-gray-600 leading-relaxed">
+              Automate data gathering, audience analysis, and generated reports for any market segment.
+            </p>
+            <Button onClick={() => handleStartWorkflow('research')} fullWidth>
+              Start Research Wizard
+            </Button>
+          </div>
+        </Card>
+
+        <Card title="Photography Album" className="hover:shadow-md transition-shadow">
+          <div className="space-y-4">
+            <p className="text-gray-600 leading-relaxed">
+              Create a professional, hosted website for your photography clients in just one click.
+            </p>
+            <Button onClick={() => handleStartWorkflow('album')} fullWidth>
+              Start Album Wizard
+            </Button>
+          </div>
+        </Card>
+      </div>
+    </div>
+  )
+}
+
+// Wrapper to handle deployment simulation
+const DeploymentContainer = () => {
+  const [status, setStatus] = useState<'processing' | 'hosting' | 'completed'>('processing')
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    if (status === 'processing') {
+      const interval = setInterval(() => {
+        setProgress((prev) => {
+          if (prev >= 100) {
+            clearInterval(interval)
+            setStatus('hosting')
+            return 100
+          }
+          return prev + 5
+        })
+      }, 200)
+      return () => clearInterval(interval)
+    } else if (status === 'hosting') {
+      const timer = setTimeout(() => {
+        setStatus('completed')
+      }, 3000)
+      return () => clearTimeout(timer)
+    }
+  }, [status])
+
+  return (
+    <DeploymentStatus 
+      status={status} 
+      progress={progress}
+      deploymentUrl="https://album.omni-channel.app/client-gallery-123"
+    />
+  )
+}
 
 const WizardPage = () => {
   const navigate = useNavigate()
-  const [searchParams] = useSearchParams()
-  const workflowType = searchParams.get('type') || 'research'
+  const workflowType = useWorkflowStore((state) => state.workflowType)
+  
+  // Redirect if no workflow type selected
+  useEffect(() => {
+    if (!workflowType) {
+      navigate('/')
+    }
+  }, [workflowType, navigate])
 
   // Research State
   const [topic, setTopic] = useState('')
   const [audience, setAudience] = useState('')
 
   // Album State
-  const [selectedTheme, setSelectedTheme] = useState('minimal')
   const [uploadedFiles, setUploadedFiles] = useState<any[]>([])
+  const [imageUrls, setImageUrls] = useState<string[]>([])
+  const [selectedTheme, setSelectedTheme] = useState('minimal')
+
+  const themes = [
+    { id: 'minimal', name: 'Minimalist', preview: '#f8fafc' },
+    { id: 'dark', name: 'Dark Elegance', preview: '#1e293b' },
+    { id: 'vibrant', name: 'Vibrant Portfolio', preview: '#ef4444' },
+  ]
 
   const sampleData = [
     { name: 'Jan', value: 400 },
@@ -42,12 +135,6 @@ const WizardPage = () => {
       'Growth in subscription-based services.',
     ],
   }
-
-  const themes = [
-    { id: 'minimal', name: 'Minimalist', preview: '#ffffff' },
-    { id: 'dark', name: 'Dark Mode', preview: '#1a1a1a' },
-    { id: 'vibrant', name: 'Vibrant', preview: '#ff4400' },
-  ]
 
   const researchSteps = [
     {
@@ -84,52 +171,55 @@ const WizardPage = () => {
 
   const albumSteps = [
     {
-      title: 'Photography: Upload & Theme',
+      title: 'Upload Media',
       content: (
-        <div className="space-y-8">
-          <section>
-            <h4 className="text-sm font-bold text-gray-400 uppercase mb-4">1. Select Theme</h4>
-            <ThemeSelector themes={themes} selectedThemeId={selectedTheme} onSelect={setSelectedTheme} />
-          </section>
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-sm font-bold text-gray-400 uppercase mb-4">2. Upload Images</h4>
-              <MediaUploader 
-                onUpload={(files) => {
-                  const newFiles = Array.from(files).map(f => ({ 
-                    name: f.name, 
-                    progress: 100, 
-                    status: 'completed',
-                    url: URL.createObjectURL(f) 
-                  }))
-                  setUploadedFiles([...uploadedFiles, ...newFiles])
-                }} 
-                uploadingFiles={uploadedFiles}
-              />
-            </div>
-            <div>
-              <h4 className="text-sm font-bold text-gray-400 uppercase mb-4">3. Live Preview</h4>
-              <LivePreview themeId={selectedTheme} images={uploadedFiles.map(f => f.url)} />
-            </div>
-          </section>
+        <MediaUploader 
+          onUpload={(files) => {
+            const fileList = Array.from(files)
+            const newFiles = fileList.map(f => ({ name: f.name, progress: 100, status: 'completed' as const }))
+            const newUrls = fileList.map(f => URL.createObjectURL(f))
+            setUploadedFiles(newFiles)
+            setImageUrls(prev => [...prev, ...newUrls])
+          }}
+          uploadingFiles={uploadedFiles}
+        />
+      ),
+    },
+    {
+      title: 'Select Theme',
+      content: (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <ThemeSelector 
+            themes={themes}
+            selectedThemeId={selectedTheme} 
+            onSelect={setSelectedTheme} 
+          />
+          <LivePreview 
+            themeId={selectedTheme} 
+            images={imageUrls} 
+          />
         </div>
       ),
     },
     {
-      title: 'Deployment Status',
-      content: (
-        <DeploymentStatus status="completed" deploymentUrl="https://example.com" />
-      ),
+      title: 'Preview & Deploy',
+      content: <DeploymentContainer />,
     },
   ]
 
+  const handleComplete = () => {
+    alert('Workflow started successfully!')
+    navigate('/')
+  }
+
+  if (!workflowType) {
+    return null
+  }
+
   return (
     <Wizard
-      steps={workflowType === 'album' ? albumSteps : researchSteps}
-      onComplete={() => {
-        alert('Workflow completed successfully!')
-        navigate('/')
-      }}
+      steps={workflowType === 'research' ? researchSteps : albumSteps}
+      onComplete={handleComplete}
       onCancel={() => navigate('/')}
     />
   )

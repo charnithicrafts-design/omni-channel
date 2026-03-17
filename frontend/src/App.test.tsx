@@ -1,22 +1,28 @@
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router'
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 import App from './App'
+import { useWorkflowStore } from './store/workflowStore'
 
 describe('App Routing', () => {
+  beforeEach(() => {
+    useWorkflowStore.getState().setWorkflowType(null)
+  })
+
   it('renders the Dashboard by default', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <App />
       </MemoryRouter>
     )
-    // Check for the heading in the main content
-    expect(screen.getByText(/Create/i, { selector: 'h1' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Omni-Channel Portal/i, level: 2 })).toBeInTheDocument()
   })
 
-  it('renders the Research Wizard when type=research', () => {
+  it('renders the Wizard page when navigating to /wizard with research type', () => {
+    useWorkflowStore.getState().setWorkflowType('research')
+    
     render(
-      <MemoryRouter initialEntries={['/wizard?type=research']}>
+      <MemoryRouter initialEntries={['/wizard']}>
         <App />
       </MemoryRouter>
     )
@@ -24,13 +30,15 @@ describe('App Routing', () => {
     expect(screen.getByRole('heading', { name: /Configure Research/i, level: 3 })).toBeInTheDocument()
   })
 
-  it('renders the Album Wizard when type=album', () => {
+  it('renders the Wizard page when navigating to /wizard with album type', () => {
+    useWorkflowStore.getState().setWorkflowType('album')
+    
     render(
-      <MemoryRouter initialEntries={['/wizard?type=album']}>
+      <MemoryRouter initialEntries={['/wizard']}>
         <App />
       </MemoryRouter>
     )
     // The Wizard uses Card which has an h3 for the step title
-    expect(screen.getByRole('heading', { name: /Photography: Upload & Theme/i, level: 3 })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Upload Media/i, level: 3 })).toBeInTheDocument()
   })
 })

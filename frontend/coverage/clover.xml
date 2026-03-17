@@ -1,89 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1773423549235" clover="3.2.0">
-  <project timestamp="1773423549236" name="All files">
-    <metrics statements="44" coveredstatements="42" conditionals="34" coveredconditionals="33" methods="21" coveredmethods="19" elements="99" coveredelements="94" complexity="0" loc="44" ncloc="44" packages="5" files="8" classes="8"/>
-    <package name="src">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="App.css" path="/workspaces/omni-channel/frontend/src/App.css">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="App.tsx" path="/workspaces/omni-channel/frontend/src/App.tsx">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.components">
-      <metrics statements="9" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="3"/>
-      <file name="Layout.tsx" path="/workspaces/omni-channel/frontend/src/components/Layout.tsx">
-        <metrics statements="9" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="3"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="10" count="8" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
-        <line num="19" count="8" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="61" count="16" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.components.common">
-      <metrics statements="11" coveredstatements="11" conditionals="14" coveredconditionals="14" methods="3" coveredmethods="3"/>
-      <file name="Button.tsx" path="/workspaces/omni-channel/frontend/src/components/common/Button.tsx">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="29" type="stmt"/>
-        <line num="10" count="29" type="stmt"/>
-        <line num="16" count="29" type="stmt"/>
-        <line num="18" count="29" type="stmt"/>
-      </file>
-      <file name="Card.tsx" path="/workspaces/omni-channel/frontend/src/components/common/Card.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
-        <line num="10" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="12" type="stmt"/>
-      </file>
-      <file name="Input.tsx" path="/workspaces/omni-channel/frontend/src/components/common/Input.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
-        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.components.wizard">
-      <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="11" methods="6" coveredmethods="6"/>
-      <file name="Wizard.tsx" path="/workspaces/omni-channel/frontend/src/components/wizard/Wizard.tsx">
-        <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="11" methods="6" coveredmethods="6"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="10" type="stmt"/>
-        <line num="19" count="10" type="stmt"/>
-        <line num="20" count="10" type="stmt"/>
-        <line num="22" count="10" type="stmt"/>
-        <line num="23" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
-        <line num="30" count="10" type="stmt"/>
-        <line num="31" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="37" count="10" type="stmt"/>
-        <line num="54" count="10" type="stmt"/>
-        <line num="60" count="30" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.store">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <file name="workflowStore.ts" path="/workspaces/omni-channel/frontend/src/store/workflowStore.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="5" type="stmt"/>
-      </file>
-    </package>
+<coverage generated="1773437475686" clover="3.2.0">
+  <project timestamp="1773437475686" name="All files">
+    <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2" elements="9" coveredelements="9" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
+    <file name="Dashboard.tsx" path="/workspaces/omni-channel/frontend/src/components/Dashboard.tsx">
+      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="83" count="9" type="stmt"/>
+    </file>
   </project>
 </coverage>
