@@ -50,7 +50,7 @@ describe('Layout', () => {
       </MemoryRouter>
     )
     
-    const menuButton = screen.getByLabelText(/Toggle menu/i)
+    const menuButton = screen.getByLabelText(/Open menu/i)
     expect(menuButton).toBeInTheDocument()
     
     // Check for the navigation drawer behavior
@@ -59,8 +59,10 @@ describe('Layout', () => {
     
     fireEvent.click(menuButton)
     expect(nav).toHaveClass('translate-x-0')
+    expect(screen.getByLabelText(/Close menu/i)).toBeInTheDocument()
     
-    fireEvent.click(menuButton)
+    fireEvent.click(screen.getByLabelText(/Close menu/i))
     expect(nav).toHaveClass('-translate-x-full')
+    expect(screen.getByLabelText(/Open menu/i)).toBeInTheDocument()
   })
 })
