@@ -4,12 +4,12 @@
 - [x] Task: React 19 & Tailwind CSS v4 Setup (9bcedf8)
     - [x] Initialize a new React 19 project (e.g., using Vite).
     - [x] Configure Tailwind CSS v4 and set up the design tokens (colors, typography).
-- [~] Task: Routing & Global State Configuration (5c03018)
-    - [~] Set up the router (e.g., React Router 7 or TanStack Router).
-    - [~] Implement a lightweight global state for user context and workflow settings (e.g., Zustand or Context API).
-- [~] Task: Layout Shell & Navigation (6e775c9)
-    - [~] Create a responsive layout shell with a sidebar or top navigation.
-    - [~] Implement the basic navigation between the Dashboard and Wizard modules.
+- [x] Task: Routing & Global State Configuration (df54d22)
+    - [x] Set up the router (e.g., React Router 7 or TanStack Router).
+    - [x] Implement a lightweight global state for user context and workflow settings (e.g., Zustand or Context API).
+- [x] Task: Layout Shell & Navigation (df54d22)
+    - [x] Create a responsive layout shell with a sidebar or top navigation.
+    - [x] Implement the basic navigation between the Dashboard and Wizard modules.
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md) (251cc4c)
 
 ## Phase 2: Common Components & Wizard Framework [checkpoint: 95bce71]
@@ -22,9 +22,9 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md) (95bce71)
 
 ## Phase 3: Market Research Module [checkpoint: 2f1362e]
-- [x] Task: Query Builder Interface (30516a8)
-    - [ ] Write tests for the Query Builder form validation and state updates.
-    - [ ] Implement the Query Builder UI with dynamic fields for research parameters.
+- [~] Task: Query Builder Interface (30516a8)
+    - [~] Write tests for the Query Builder form validation and state updates.
+    - [~] Implement the Query Builder UI with dynamic fields for research parameters.
 - [x] Task: Data Visualization with Recharts (584dea1)
     - [ ] Write tests for chart data transformation and rendering.
     - [ ] Integrate Recharts and implement live, interactive charts for research insights.

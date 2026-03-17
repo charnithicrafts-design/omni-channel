@@ -10,8 +10,8 @@ describe('LivePreview', () => {
 
   it('renders image placeholders when images are provided', () => {
     render(<LivePreview themeId="minimal" images={['img1.jpg', 'img2.jpg']} />)
-    expect(screen.getByText('Image 1')).toBeInTheDocument()
-    expect(screen.getByText('Image 2')).toBeInTheDocument()
+    expect(screen.getByAltText('Album Image 1')).toBeInTheDocument()
+    expect(screen.getByAltText('Album Image 2')).toBeInTheDocument()
   })
 
   it('applies correct styles for dark theme', () => {
