@@ -14,40 +14,40 @@
 
 ## Phase 2: Common Components & Wizard Framework [checkpoint: 95bce71]
 - [x] Task: Design & Implementation of Core UI Components (416d1f3)
-    - [ ] Write tests for common components (Button, Input, Card, Modal, etc.).
-    - [ ] Implement the core components using Tailwind v4.
+    - [x] Write tests for common components (Button, Input, Card, Modal, etc.).
+    - [x] Implement the core components using Tailwind v4.
 - [x] Task: Wizard Framework Implementation (9569911)
-    - [ ] Build a generic, multi-step wizard component that handles state transitions.
-    - [ ] Implement progress indicators and navigation controls (Next, Back, Cancel).
+    - [x] Build a generic, multi-step wizard component that handles state transitions.
+    - [x] Implement progress indicators and navigation controls (Next, Back, Cancel).
 - [x] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md) (95bce71)
 
 ## Phase 3: Market Research Module [checkpoint: 2f1362e]
-- [~] Task: Query Builder Interface (30516a8)
-    - [~] Write tests for the Query Builder form validation and state updates.
-    - [~] Implement the Query Builder UI with dynamic fields for research parameters.
+- [x] Task: Query Builder Interface (65bd730)
+    - [x] Write tests for the Query Builder form validation and state updates.
+    - [x] Implement the Query Builder UI with dynamic fields for research parameters.
 - [x] Task: Data Visualization with Recharts (584dea1)
-    - [ ] Write tests for chart data transformation and rendering.
-    - [ ] Integrate Recharts and implement live, interactive charts for research insights.
+    - [x] Write tests for chart data transformation and rendering.
+    - [x] Integrate Recharts and implement live, interactive charts for research insights.
 - [x] Task: Report Viewer & Export Tools (b4ff379)
-    - [ ] Implement a polished view for AI-generated summaries.
-    - [ ] Add functionality to export reports to PDF and generate shareable links.
+    - [x] Implement a polished view for AI-generated summaries.
+    - [x] Add functionality to export reports to PDF and generate shareable links.
 - [x] Task: Conductor - User Manual Verification 'Phase 3' (Protocol in workflow.md) (2f1362e)
 
 ## Phase 4: Photography Album Module [checkpoint: 6ac4fc8]
 - [x] Task: Media Uploader Component (9b271eb)
-    - [ ] Write tests for file upload handling and progress tracking.
-    - [ ] Implement a high-performance drag-and-drop uploader with real-time feedback.
-- [x] Task: Theme Selector & Live Preview (2a9f7b7)
-    - [ ] Create a visual Theme Selector for curated layouts.
-    - [ ] Implement a Live Preview window that displays the generated album site in real-time.
+    - [x] Write tests for file upload handling and progress tracking.
+    - [x] Implement a high-performance drag-and-drop uploader with real-time feedback.
+- [x] Task: Theme Selector & Live Preview (65bd730)
+    - [x] Create a visual Theme Selector for curated layouts.
+    - [x] Implement a Live Preview window that displays the generated album site in real-time.
 - [x] Task: Deployment Status & Results (88447d3)
-    - [ ] Implement visual indicators for model processing and site hosting status.
-    - [ ] Show the final deployment link with clear next steps for the user.
+    - [x] Implement visual indicators for model processing and site hosting status.
+    - [x] Show the final deployment link with clear next steps for the user.
 - [x] Task: Conductor - User Manual Verification 'Phase 4' (Protocol in workflow.md) (6ac4fc8)
 
 ## Phase 5: Integration & Polish
 - [x] Task: Unified Portal Finalization (d223835)
-    - [ ] Finalize the Dashboard/Portal entry point to start new wizards or view recent projects.
+    - [x] Finalize the Dashboard/Portal entry point to start new wizards or view recent projects.
 - [x] Task: Responsive Audit & UI Polish
     - [x] Conduct a thorough audit for mobile responsiveness and accessibility.
     - [x] Apply final design touches and animations for a "professional" feel.
