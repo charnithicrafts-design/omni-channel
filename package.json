@@ -1,0 +1,9 @@
+{
+  "name": "omni-channel-root",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "chmod +x scripts/start-dev.sh && ./scripts/start-dev.sh",
+    "stop": "pkill -f uvicorn && pkill -f vite && docker-compose down"
+  }
+}
